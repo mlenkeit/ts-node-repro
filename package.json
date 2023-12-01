@@ -1,0 +1,19 @@
+{
+  "name": "ts-node-repro",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+  },
+  "keywords": [],
+  "author": "Maximilian Lenkeit",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@tsconfig/node18": "18.2.2",
+    "@types/node": "18.16.1",
+    "ts-node": "10.9.1",
+    "typescript": "5.2.2"
+  }
+}

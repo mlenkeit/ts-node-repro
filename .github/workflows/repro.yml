@@ -7,7 +7,8 @@ on:
       - main
 
 jobs:
-  delete-accounts:
+  repro:
+    runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:

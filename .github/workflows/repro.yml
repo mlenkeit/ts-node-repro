@@ -1,0 +1,32 @@
+name: Repro
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  delete-accounts:
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version:
+          - 18.18.2
+          - 18.19.0
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install dependencies
+        run: |
+          npm ci
+
+      - name: Run hello world
+        run: |
+          npx ts-node main.ts
